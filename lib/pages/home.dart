@@ -65,7 +65,8 @@ class _HomeState extends State<Home> {
       // print('socket creation');
       socket!.disconnect();
     }
-    socket = socketFactory('http://$hostname:$port/$namespace');
+    print('$hostname:$port/$namespace');
+    socket = socketFactory('$hostname:$port/$namespace');
 
     socket!.onConnect((data) {
       setState(() {
